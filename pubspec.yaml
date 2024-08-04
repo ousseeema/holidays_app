@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.6
+  introduction_screen: ^3.1.14
 
 dev_dependencies:
 
