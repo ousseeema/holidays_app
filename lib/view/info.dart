@@ -10,6 +10,12 @@ class infoPage extends StatefulWidget {
 class _infoPageState extends State<infoPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Column(
+        children: [
+          Text("info_page")
+        ],
+      ),
+    );
   }
 }
