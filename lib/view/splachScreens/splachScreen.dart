@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:holidays_app/utils/appColor.dart';
 import 'package:holidays_app/utils/dimenssions.dart';
 import 'package:holidays_app/view/info.dart';
-import 'package:holidays_app/view/login/login.dart';
 
 class SplachScreen extends StatefulWidget {
   const SplachScreen({super.key});
@@ -26,8 +26,8 @@ class _SplachScreenState extends State<SplachScreen> {
       });
     });
 
-    Future.delayed(const Duration(milliseconds: 3500), () {
-         Get.offAll(const infoPage()) ;});
+   // Future.delayed(const Duration(milliseconds: 3500), () {
+     //    Get.offAll(const infoPage()) ;});
   
   }
  
@@ -56,27 +56,7 @@ class _SplachScreenState extends State<SplachScreen> {
         width: _isExpanded ? Dimenssions.width : 150,
      
         child: Center(
-          child:  Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Best",style: TextStyle(
-                color: Colors.white,
-                fontSize: Dimenssions.font20,
-                fontWeight: FontWeight.bold
-              ),),
-              SizedBox(height: Dimenssions.height20,),
-
-
-
-              Text(
-                "Holidays",
-                style: TextStyle(
-                    color:const  Color.fromRGBO(255, 222, 89, 2),
-                  fontSize: Dimenssions.font30,
-                      fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
+          child:  Image.asset("images/spalsh.png" , width: Dimenssions.width30*7, height: Dimenssions.height20*12,color: AppColors.iconColor,)
         ),
       )),
     );
