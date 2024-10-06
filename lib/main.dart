@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:holidays_app/view/info.dart';
 import 'package:holidays_app/view/splachScreens/splachScreen.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: const SplachScreen(),
+      home: const infoPage(),
     );
   }
 }

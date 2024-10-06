@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:holidays_app/utils/appColor.dart';
 import 'package:holidays_app/utils/dimenssions.dart';
-import 'package:holidays_app/view/info.dart';
 
 class SplachScreen extends StatefulWidget {
   const SplachScreen({super.key});
@@ -56,7 +55,7 @@ class _SplachScreenState extends State<SplachScreen> {
         width: _isExpanded ? Dimenssions.width : 150,
      
         child: Center(
-          child:  Image.asset("images/spalsh.png" , width: Dimenssions.width30*7, height: Dimenssions.height20*12,color: AppColors.iconColor,)
+          child:  Image.asset("images/old.png" , width: Dimenssions.width30*7, height: Dimenssions.height20*12,color: AppColors.iconColor,)
         ),
       )),
     );
