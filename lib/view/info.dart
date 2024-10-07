@@ -19,10 +19,7 @@ class _infoPageState extends State<infoPage> {
    void _onIntroEnd() {
     Get.offAll(const loginPage());
   }
-   onSkip() {
-    return false;
-   }
-
+  
 
 
 
@@ -100,8 +97,8 @@ Widget _buildImage(String assetName, [width = 300]) {
             image: _buildImage('3.png', Dimenssions.width10*50),
             decoration: pageDecoration,
           ),],
-           onDone: () => _onIntroEnd(),
-        onSkip: () => onSkip(), // You can override onSkip callback
+           onDone: () => _onIntroEnd(),// its the same in the done and the skip bc it take u to the login page 
+        onSkip: () => _onIntroEnd(), // its the same in the done and the skip bc it take u to the login page 
         showSkipButton: true,
         skipOrBackFlex: 0,
         nextFlex: 0,

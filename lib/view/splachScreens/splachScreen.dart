@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:holidays_app/utils/appColor.dart';
 import 'package:holidays_app/utils/dimenssions.dart';
+import 'package:holidays_app/view/info.dart';
 
 class SplachScreen extends StatefulWidget {
   const SplachScreen({super.key});
@@ -25,8 +26,8 @@ class _SplachScreenState extends State<SplachScreen> {
       });
     });
 
-   // Future.delayed(const Duration(milliseconds: 3500), () {
-     //    Get.offAll(const infoPage()) ;});
+    Future.delayed(const Duration(milliseconds: 3500), () {
+         Get.offAll(const infoPage()) ;});
   
   }
  
@@ -43,8 +44,8 @@ class _SplachScreenState extends State<SplachScreen> {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Color.fromRGBO(19, 15, 65, 1),
-                Color.fromRGBO(62, 55, 122, 0.8),
+               Color.fromRGBO(30, 30, 30, 1),
+               Color.fromRGBO(100, 100, 100, 0.8),
                 Color.fromRGBO(89, 81, 154, 0.612),
                
               ],)
@@ -55,8 +56,8 @@ class _SplachScreenState extends State<SplachScreen> {
         width: _isExpanded ? Dimenssions.width : 150,
      
         child: Center(
-          child:  Image.asset("images/old.png" , width: Dimenssions.width30*7, height: Dimenssions.height20*12,color: AppColors.iconColor,)
-        ),
+        child:  Image.asset("images/holidays_logo.png" , width: Dimenssions.width30*9, height: Dimenssions.height20*22,)
+        )
       )),
     );
   }
