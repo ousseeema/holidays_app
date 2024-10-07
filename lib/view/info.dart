@@ -19,7 +19,9 @@ class _infoPageState extends State<infoPage> {
    void _onIntroEnd() {
     Get.offAll(const loginPage());
   }
-   onSkip() => Get.reset();
+   onSkip() {
+    return false;
+   }
 
 
 
@@ -27,14 +29,16 @@ class _infoPageState extends State<infoPage> {
 Widget _buildImage(String assetName, [width = 300]) {
     return Image.asset('images/$assetName', width: width);
   }
-       static final    bodyStyle =  TextStyle(fontSize: Dimenssions.font20);
+       static final    bodyStyle =  TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: Dimenssions.font20);
 
    final  pageDecoration = PageDecoration(
       titleTextStyle:   TextStyle(fontSize: Dimenssions.font20 +Dimenssions.font10, fontWeight: FontWeight.w700),
       bodyTextStyle: bodyStyle,
       bodyPadding:  EdgeInsets.fromLTRB(Dimenssions.LRpadmarg20-2, 0.0, Dimenssions.LRpadmarg20-2, Dimenssions.LRpadmarg20-2),
       pageColor: Colors.white,
-      imagePadding: EdgeInsets.zero,
+      imagePadding: EdgeInsets.only(top: Dimenssions.TBpadmarg20*2),
     );
     
   @override
@@ -51,24 +55,49 @@ Widget _buildImage(String assetName, [width = 300]) {
         
          pages: [
           PageViewModel(
-            title: "Fractional shares",
+            titleWidget: Column(
+              children: [
+                SizedBox(height: Dimenssions.height20*7,),
+                Text("Aventures Inoubliables", style: TextStyle( 
+                  fontWeight: FontWeight.bold,
+                  fontSize: Dimenssions.font20*1.5
+                ),),
+              ],
+            ),
             body:
-                "Instead of having to buy an entire share, invest any amount you want.",
-            image: _buildImage('old.png', Dimenssions.width10*35),
+                "Explorez des destinations inoubliables et vivez des aventures uniques !",
+            image: _buildImage('1.png', Dimenssions.width10*50),
             decoration: pageDecoration,
           ),
           PageViewModel(
-            title: "Learn as you go",
+            titleWidget: Column(
+              children: [
+                SizedBox(height: Dimenssions.height20*7,),
+                Text( "Immersion Culturelle", style: TextStyle( 
+                  fontWeight: FontWeight.bold,
+                  fontSize: Dimenssions.font20*1.5
+                ),),
+              ],
+            ),
             body:
-                "Download the Stockpile app and master the market with our mini-lesson.",
-            image: _buildImage('old.png', Dimenssions.width10*35),
+                "Voyagez au cœur de cultures fascinantes avec nos circuits sur mesure.",
+            image: _buildImage('2.png', Dimenssions.width10*50),
             decoration: pageDecoration,
           ),
           PageViewModel(
-            title: "Kids and teens",
+           
+            titleWidget: Column(
+              children: [
+                SizedBox(height: Dimenssions.height20*7,),
+                Text("Évasion Naturelle", style: TextStyle( 
+                  fontWeight: FontWeight.bold,
+                  fontSize: Dimenssions.font20*1.5
+                ),),
+              ],
+            ),
             body:
-                "Kids and teens can track their stocks 24/7 and place trades that you approve.",
-            image: _buildImage('old.png', Dimenssions.width10*35),
+                "Évadez-vous vers des paysages à couper le souffle dès aujourd'hui !",
+            image: _buildImage('3.png', Dimenssions.width10*50),
             decoration: pageDecoration,
           ),],
            onDone: () => _onIntroEnd(),
@@ -90,10 +119,10 @@ Widget _buildImage(String assetName, [width = 300]) {
         controlsMargin: const EdgeInsets.all(16),
         controlsPadding: kIsWeb
             ? const EdgeInsets.all(12.0)
-            : const EdgeInsets.fromLTRB(8.0, 4.0, 8.0, 4.0),
+            :  const EdgeInsets.fromLTRB(8.0, 4.0, 8.0, 4.0),
         dotsDecorator:  DotsDecorator(
           
-          color: Color.fromARGB(255, 0, 0, 0),
+          color:  const Color.fromARGB(255, 0, 0, 0),
          activeColor:   Colors.black, 
          activeSize:Size(Dimenssions.width30,Dimenssions.height10+2) ,
        
