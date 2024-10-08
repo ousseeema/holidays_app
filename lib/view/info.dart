@@ -90,6 +90,7 @@ Widget _buildImage(String assetName, [width = 300]) {
                   fontWeight: FontWeight.bold,
                   fontSize: Dimenssions.font20*1.5
                 ),),
+                
               ],
             ),
             body:

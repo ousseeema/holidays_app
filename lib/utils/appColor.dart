@@ -9,7 +9,7 @@ class AppColors {
   static const bigTextColor = Color.fromARGB(255, 37, 35, 35);
   static const mainTextColor = Colors.black;
   static const insidetextcolor =Colors.white;
-
+  static const loginColor =  Color.fromRGBO(43, 45, 94, 1);
 
 
 
