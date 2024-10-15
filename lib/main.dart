@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:holidays_app/utils/dependncy.dart';
 import 'package:holidays_app/view/info.dart';
 import 'package:holidays_app/view/splachScreens/splachScreen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
+Dependncy.initDependncy();
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const SplachScreen(),
     );
   }

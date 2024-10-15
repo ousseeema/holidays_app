@@ -6,7 +6,7 @@ class Dependncy {
 
 
 
-void initDependncy()async{
+ static void  initDependncy()async{
  
  //shared preferences
     SharedPreferences sharedpreferences = await SharedPreferences.getInstance();
